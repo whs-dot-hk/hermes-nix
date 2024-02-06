@@ -12,6 +12,7 @@ with inputs.nixpkgs; let
       url = "https://github.com/informalsystems/hermes/archive/refs/tags/v1.8.0.tar.gz";
       sha256 = "sha256:16piirbdgddvws9wbd0hcpwmgsk0plxalwlf9llqaaj3xj3dbl1i";
     };
+    doCheck = false;
   };
 in {
   inherit hermes_1_8_0;
