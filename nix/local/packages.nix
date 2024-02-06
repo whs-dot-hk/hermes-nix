@@ -9,8 +9,9 @@ with inputs.nixpkgs; let
     dontBuild = true;
     sourceRoot = ".";
     installPhase = ''
-      mkdir -p $out/bin
-      cp hermes $out/bin/hermes
+      runHook preInstall
+      install -m755 -D hermes $out/bin/hermes
+      runHook postInstall
     '';
     nativeBuildInputs = [
       autoPatchelfHook
