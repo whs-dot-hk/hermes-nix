@@ -1,4 +1,6 @@
 {
+  inputs.crane.url = "github:ipetkov/crane";
+  inputs.fenix.url = "github:nix-community/fenix/main";
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   inputs.std.url = "github:divnix/std";
 
