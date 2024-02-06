@@ -16,6 +16,7 @@ with inputs.nixpkgs; let
     nativeBuildInputs = [
       autoPatchelfHook
     ];
+    buildInputs = [glibc];
   };
 in {
   inherit hermes_1_8_0;
