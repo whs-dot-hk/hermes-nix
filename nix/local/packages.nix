@@ -12,6 +12,9 @@ with inputs.nixpkgs; let
       mkdir -p $out/bin
       cp hermes $out/bin/hermes
     '';
+    nativeBuildInputs = [
+      autoPatchelfHook
+    ];
   };
 in {
   inherit hermes_1_8_0;
