@@ -27,8 +27,8 @@ with inputs.nixpkgs; let
       url = "https://github.com/devashishdxt/hermes/archive/refs/heads/gas-estimate.tar.gz";
       sha256 = "sha256:1mwm0ia69wlshr5m5a8vblc6zh244rrxxm7np5df74jg330nyw7z";
     };
-    nativeBuildInputs = [pkgs.pkg-config];
-    buildInputs = [pkgs.glibc pkgsStatic.openssl];
+    nativeBuildInputs = [pkg-config];
+    buildInputs = [pkgsStatic.openssl];
     doCheck = false;
     CARGO_BUILD_TARGET = target;
     CARGO_BUILD_RUSTFLAGS = "-Ctarget-feature=+crt-static";
