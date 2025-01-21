@@ -53,7 +53,18 @@ with inputs.nixpkgs; let
     doCheck = false;
     cargoHash = "sha256-wa0dzSvsS050qHEf2EMQRiQ+/c22Yxg5BsU7olrx4Ws=";
   };
+  hermes_1_10_5 = rustPlatform.buildRustPackage rec {
+    pname = "hermes";
+    version = "1.10.5";
+    src = fetchTarball {
+      url = "https://github.com/informalsystems/hermes/archive/refs/tags/v${version}.tar.gz";
+      sha256 = "sha256:0bllmk32m3xd6y4z1q4p86bbs7rb672ksjn4lc25j3g4cbyf06vj";
+    };
+    doCheck = false;
+    cargoHash = "sha256-uwkcMegGnzEHqs161idOJLmVoHbGxBj79Bq2gYZA6jI=";
+  };
 in {
+  inherit hermes_1_10_5;
   inherit hermes_1_10_0;
   inherit hermes_1_8_0;
   inherit hermes_1_8_2;
