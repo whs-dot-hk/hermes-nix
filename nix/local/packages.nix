@@ -63,10 +63,21 @@ with inputs.nixpkgs; let
     doCheck = false;
     cargoHash = "sha256-uwkcMegGnzEHqs161idOJLmVoHbGxBj79Bq2gYZA6jI=";
   };
+  hermes_test_20251112 = rustPlatform.buildRustPackage rec {
+    pname = "hermes";
+    version = "test-20251112";
+    src = fetchTarball {
+      url = "https://github.com/henrywong-crypto/hermes/archive/refs/tags/${version}.tar.gz";
+      sha256 = "sha256:0s9dy7581b1yphgcr7lkddjf688bwzvvcwa9f3ci6mx6q449dk3w";
+    };
+    doCheck = false;
+    cargoHash = "sha256-wGe1tn+iIsSfdWXfMAILA1U9ejdccb9he3uBJ3Lvl/w=";
+  };
 in {
-  inherit hermes_1_10_5;
   inherit hermes_1_10_0;
+  inherit hermes_1_10_5;
   inherit hermes_1_8_0;
   inherit hermes_1_8_2;
   inherit hermes_gas_estimation;
+  inherit hermes_test_20251112;
 }
