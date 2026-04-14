@@ -61,7 +61,7 @@ with inputs.nixpkgs; let
       sha256 = "sha256:0bllmk32m3xd6y4z1q4p86bbs7rb672ksjn4lc25j3g4cbyf06vj";
     };
     doCheck = false;
-    cargoHash = "sha256-uwkcMegGnzEHqs161idOJLmVoHbGxBj79Bq2gYZA6jI=";
+    cargoHash = "sha256-P9cCDMSZA358dFn5o1d36As4vv3HD0O87wujQ8MPQLs=";
   };
   hermes_test_20251112 = rustPlatform.buildRustPackage rec {
     pname = "hermes";
